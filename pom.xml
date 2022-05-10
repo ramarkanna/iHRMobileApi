@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -12,17 +12,17 @@
     <groupId>design.boilerplate</groupId>
     <artifactId>spring-boot</artifactId>
     <version>1.0.0</version>
-    <name>spring-boot-boilerplate</name>
+    <name>ihr5-mobile-api</name>
     <description>
-        Spring Boot Boilerplate is a starter kit. This project includes : Spring Boot(2.3.3), Spring Data JPA, Spring Validation, Spring Security +
-        JWT Token, PostgreSQL, Mapstruct, Lombok, Swagger
+        IHR5 Mobile Api using : Spring Boot(2.3.3), Spring Data JPA, Spring Validation, Spring Security +
+        JWT Token, Oracle, Mapstruct, Lombok, Swagger
     </description>
 
     <developers>
         <developer>
-            <name>Faruk Genç</name>
-            <email>omer@farukgenc.com</email>
-            <url>https://farukgenc.com</url>
+            <name>Kannadhasan Ramar</name>
+            <email>ramarkanna@gmail.com</email>
+            <url>https://www.ihros.com</url>
         </developer>
     </developers>
 
@@ -69,11 +69,6 @@
             <version>${jwt.version}</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <scope>runtime</scope>
-        </dependency>
 
         <dependency>
             <groupId>org.mapstruct</groupId>
@@ -86,6 +81,25 @@
             <version>${mapstruct.version}</version>
         </dependency>
 
+
+ <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api 
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>1.7.25</version>
+    </dependency>
+
+
+
+
+    <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>1.18.6</version>
+        <scope>provided</scope>
+    </dependency>
+    
+    -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -110,6 +124,23 @@
             <artifactId>springfox-swagger-ui</artifactId>
             <version>${springfox-swagger2.version}</version>
         </dependency>
+	
+	<dependency>
+   <groupId>com.zaxxer</groupId>
+   <artifactId>HikariCP</artifactId>
+   <version>4.0.3</version>
+</dependency>
+	
+   <!-- Oracle JDBC driver -->
+        <!-- https://mvnrepository.com/artifact/com.oracle/ojdbc7 -->
+		<dependency>
+		    <groupId>com.oracle</groupId>
+		    <artifactId>ojdbc7</artifactId>
+		    <version>12.1.0.2</version>
+		</dependency>
+
+
+        
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -127,7 +158,7 @@
 
     <build>
 
-        <finalName>spring-boot-boilerplate</finalName>
+        <finalName>ihr5MobileApi</finalName>
 
         <plugins>
             <plugin>
@@ -138,4 +169,12 @@
 
     </build>
 
+  <repositories>
+		<repository>
+	        <id>hand-china-repo</id>
+	        <name>HandChinaRepo</name>
+	        <url>http://nexus.saas.hand-china.com/content/repositories/rdc/</url>
+    	</repository>
+   </repositories>
+   
 </project>

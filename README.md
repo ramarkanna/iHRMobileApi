@@ -6,7 +6,7 @@
 - Spring Data JPA
 - Spring Validation
 - Spring Security + JWT Token
-- PostgreSQL
+- PostgreSQL  / Changed to Oracle
 - Mapstruct
 - Lombok
 - Swagger
@@ -30,3 +30,10 @@ Run service in command line. Navigate to *target* directory.
 Apache License 2.0
 
    [For Angular]: <https://github.com/Genc/angular-boilerplate>
+--------
+
+## Swagger API doc access after running the applicaiton 
+
+http://localhost:8080/swagger-ui.html
+
+
